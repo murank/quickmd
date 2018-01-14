@@ -1,0 +1,214 @@
+// scss/default.scss
+// Stylesheet imported by default, and not editable.
+
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/_normalize";
+@import '~prismjs/themes/prism';
+
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+body {
+  @include clearfix;
+}
+
+$toc-pane-width: 300px;
+$content-pane-margin-right: $toc-pane-width + $line-height-computed;
+#contentPane {
+  box-sizing: border-box;
+  float: left;
+  margin: $line-height-computed (-$content-pane-margin-right) $line-height-computed 0;
+  padding: 0 ($content-pane-margin-right + $line-height-computed) 0 $line-height-computed;
+  width: 100%;
+}
+
+#tocPane {
+  background-color: #f5f5f5;
+  box-sizing: border-box;
+  border: 1px solid $pre-border-color;
+  float: left;
+  margin: $line-height-computed $line-height-computed $line-height-computed 0;
+  padding: $line-height-computed/2 $line-height-computed/2 $line-height-computed/2 0;
+  width: $toc-pane-width;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding-left: $font-size-base;
+  }
+
+  a {
+    color: #999;
+    display: block;
+    padding: 5px $font-size-base;
+    text-decoration: none;
+
+    .active, &:hover, &:active {
+      background-color: #efefef;
+      color: #333;
+    }
+
+    &:hover, &:active {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* Headings */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  & a {
+    color: $headings-color;
+    display: block;
+    text-decoration: none;
+
+    &:hover:after {
+      color: #999;
+      content: '\0B6';  // &para;
+      font-size: 40%;
+      margin-left: 5px;
+    }
+  }
+}
+
+h1, h2, h3 {
+  margin-top: $line-height-computed;
+  margin-bottom: ($line-height-computed / 2);
+}
+h4, h5, h6 {
+  margin-top: ($line-height-computed / 2);
+  margin-bottom: ($line-height-computed / 2);
+}
+
+h1 { font-size: $font-size-h1; }
+h2 { font-size: $font-size-h2; }
+h3 { font-size: $font-size-h3; }
+h4 { font-size: $font-size-h4; }
+h5 { font-size: $font-size-h5; }
+h6 { font-size: $font-size-h6; }
+
+/* Body text */
+
+p {
+  margin: 0 0 ($line-height-computed / 2);
+}
+
+/* Lists */
+
+// Unordered and Ordered lists
+
+ul, ol {
+  margin-top: 0;
+  margin-bottom: ($line-height-computed / 2);
+  ul, ol {
+    margin-bottom: 0;
+  }
+}
+
+// Description Lists
+dl {
+  margin-top: 0; // Remove browser default
+  margin-bottom: $line-height-computed;
+}
+dt,
+dd {
+  line-height: $line-height-base;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: 0; // Undo browser default
+}
+
+/* Misc */
+
+
+// Blockquotes
+blockquote {
+  padding: ($line-height-computed / 2) $line-height-computed;
+  margin: 0 0 $line-height-computed;
+  font-size: $blockquote-font-size;
+  border-left: 5px solid $blockquote-border-color;
+
+  p, ul, ol {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* Code (inline and block) */
+
+// Inline and block code styles
+code, pre {
+  font-family: $font-family-monospace;
+}
+
+// Inline code
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: $code-color;
+  background-color: $code-bg;
+  border-radius: $border-radius-base;
+}
+
+// Blocks of code
+pre {
+  display: block;
+  padding: (($line-height-computed - 1) / 2);
+  margin: 0 0 ($line-height-computed / 2);
+  font-size: ($font-size-base - 1); // 14px to 13px
+  line-height: $line-height-base;
+  word-break: break-all;
+  word-wrap: break-word;
+  color: $pre-color;
+  background-color: $pre-bg;
+  border: 1px solid $pre-border-color;
+  border-radius: $border-radius-base;
+
+  // Account for some code outputs that place code tags in pre tags
+  code {
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border-radius: 0;
+  }
+}
+
+table {
+  background-color: $table-bg;
+  border: 1px solid $table-border-color;
+  max-width: 100%;
+  margin-bottom: $line-height-computed;
+}
+
+th, td {
+  border: 1px solid $table-border-color;
+  padding: $table-condensed-cell-padding;
+  line-height: $line-height-base;
+}
+
+th {
+  border-bottom-width: 2px;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+td {
+  vertical-align: top;
+}
+
+tbody > tr:nth-of-type(odd) {
+  background-color: $table-bg-accent;
+}

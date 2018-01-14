@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  Quick Markdown 1.0.0
+  Copyright (c) 2018 murank
+-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Quick Markdown Template</title>
+  <style>/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-webkit-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{-webkit-box-sizing:border-box;box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-webkit-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}code[class*=language-],pre[class*=language-]{color:#000;background:none;text-shadow:0 1px #fff;font-family:Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-ms-hyphens:none;hyphens:none}code[class*=language-]::-moz-selection,code[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection{text-shadow:none;background:#b3d4fc}code[class*=language-]::selection,code[class*=language-] ::selection,pre[class*=language-]::selection,pre[class*=language-] ::selection{text-shadow:none;background:#b3d4fc}@media print{code[class*=language-],pre[class*=language-]{text-shadow:none}}pre[class*=language-]{padding:1em;margin:.5em 0;overflow:auto}:not(pre)>code[class*=language-],pre[class*=language-]{background:#f5f2f0}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal}.token.cdata,.token.comment,.token.doctype,.token.prolog{color:#708090}.token.punctuation{color:#999}.namespace{opacity:.7}.token.boolean,.token.constant,.token.deleted,.token.number,.token.property,.token.symbol,.token.tag{color:#905}.token.attr-name,.token.builtin,.token.char,.token.inserted,.token.selector,.token.string{color:#690}.language-css .token.string,.style .token.string,.token.entity,.token.operator,.token.url{color:#a67f59;background:hsla(0,0%,100%,.5)}.token.atrule,.token.attr-value,.token.keyword{color:#07a}.token.function{color:#dd4a68}.token.important,.token.regex,.token.variable{color:#e90}.token.bold,.token.important{font-weight:700}.token.italic{font-style:italic}.token.entity{cursor:help}body:after,body:before{content:" ";display:table}body:after{clear:both}#contentPane{margin:20px -320px 20px 0;padding:0 340px 0 20px;width:100%}#contentPane,#tocPane{-webkit-box-sizing:border-box;box-sizing:border-box;float:left}#tocPane{background-color:#f5f5f5;border:1px solid #ccc;margin:20px 20px 20px 0;padding:10px 10px 10px 0;width:300px}#tocPane ul{list-style:none;margin:0;padding-left:14px}#tocPane a{color:#999;display:block;padding:5px 14px;text-decoration:none}#tocPane a .active,#tocPane a:active,#tocPane a:hover{background-color:#efefef;color:#333}#tocPane a:active,#tocPane a:hover{text-decoration:underline}h1,h2,h3,h4,h5,h6{font-family:inherit;font-weight:500;line-height:1.1}h1:first-child,h2:first-child,h3:first-child,h4:first-child,h5:first-child,h6:first-child{margin-top:0}h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{color:inherit;display:block;text-decoration:none}h1 a:hover:after,h2 a:hover:after,h3 a:hover:after,h4 a:hover:after,h5 a:hover:after,h6 a:hover:after{color:#999;content:"\B6";font-size:40%;margin-left:5px}h1,h2,h3{margin-top:20px}h1,h2,h3,h4,h5,h6{margin-bottom:10px}h4,h5,h6{margin-top:10px}h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:18px}h5{font-size:14px}h6{font-size:12px}p{margin:0 0 10px}ol,ul{margin-top:0;margin-bottom:10px}ol ol,ol ul,ul ol,ul ul{margin-bottom:0}dl{margin-top:0;margin-bottom:20px}dd,dt{line-height:1.42857}dt{font-weight:700}dd{margin-left:0}blockquote{padding:10px 20px;margin:0 0 20px;font-size:17.5px;border-left:5px solid #eee}blockquote ol:last-child,blockquote p:last-child,blockquote ul:last-child{margin-bottom:0}code,pre{font-family:Menlo,Monaco,Consolas,Courier New,monospace}code{padding:2px 4px;font-size:90%;color:#c7254e;background-color:#f9f2f4;border-radius:4px}pre{display:block;padding:9.5px;margin:0 0 10px;font-size:13px;line-height:1.42857;word-break:break-all;word-wrap:break-word;color:#333;background-color:#f5f5f5;border:1px solid #ccc;border-radius:4px}pre code{padding:0;font-size:inherit;color:inherit;white-space:pre-wrap;border-radius:0}pre code,table{background-color:transparent}table{max-width:100%;margin-bottom:20px}table,td,th{border:1px solid #ddd}td,th{padding:5px;line-height:1.42857}th{border-bottom-width:2px;text-align:left;vertical-align:bottom}td{vertical-align:top}tbody>tr:nth-of-type(odd){background-color:#f9f9f9}</style>
+  <style id="userStyle"></style>
+</head>
+<body>
+  <div id="contentPane"><h1 id="quick-markdown"><a href="#quick-markdown">Quick Markdown</a></h1>
+<p>Quick Markdown is a lightweight, standalone markdown editor that works in browser.
+Original idea comes from <a href="https://tatesuke.github.io/KanTanMarkdown/">KanTanMarkdown </a>.</p>
+<h2 id="how-to-use"><a href="#how-to-use">How to use</a></h2>
+<h3 id="edit"><a href="#edit">Edit</a></h3>
+<p>To begin editing, click the right-top &quot;Edit&quot; button (or Ctrl-E).</p>
+<p>Quick Markdown supports <a href="https://github.github.com/gfm/">GitHub Flavored Markdown</a>,
+and also code highlighting.
+Supported languages are listed in  <a href="https://github.com/murank/quickmd/blob/master/src/main/ts/lib/prismjs.ts">src/main/ts/lib/prismjs.ts</a>.</p>
+<p>In order to customize the page design, open &quot;CSS&quot; tab and put additional stylesheet.
+You can also preview the change in the preview area.</p>
+<h3 id="preview"><a href="#preview">Preview</a></h3>
+<p>You can preview whole document by clicking the right-top &quot;Preview&quot; button (or Ctrl-E) while editing.</p>
+<p>The preview mode shows actual (i.e. not in editing) html document.</p>
+<h3 id="save"><a href="#save">Save</a></h3>
+<p>To save the document in editing, click the right-top &quot;Save&quot; button (or Ctrl-S).</p>
+<h3 id="update-quick-markdown"><a href="#update-quick-markdown">Update Quick Markdown</a></h3>
+<p>Update <code>quickmd.js</code> in <code>scripts</code> directory, then re-save the document.</p>
+<h2 id="limitations"><a href="#limitations">Limitations</a></h2>
+<p>Quick Markdown uses <a href="https://developer.mozilla.org/en-US/docs/Web/API/Blob">Blob</a> object so that you can&#39;t edit the document in the browsers which don&#39;t support Blob (e.g. &lt;= IE9).</p>
+<p>If the edit buttons are not shown in IE&gt;=10, the browser may be blocking javascript in local.
+Try re-open the document and allow to execute the local script.</p>
+<h2 id="contribution"><a href="#contribution">Contribution</a></h2>
+<p>Any issues or PR are welcome :)<br><a href="https://github.com/murank/quickmd/">Github</a></p>
+<h2 id="license"><a href="#license">License</a></h2>
+<p>MIT</p>
+</div>
+  <div id="tocPane"><ul>
+  <li><a href="#quick-markdown">Quick Markdown</a></li>
+  <li><ul>
+    <li><a href="#how-to-use">How to use</a></li>
+    <li><ul>
+      <li><a href="#edit">Edit</a></li>
+      <li><a href="#preview">Preview</a></li>
+      <li><a href="#save">Save</a></li>
+      <li><a href="#update-quick-markdown">Update Quick Markdown</a></li>
+    </ul></li>
+    <li><a href="#limitations">Limitations</a></li>
+    <li><a href="#contribution">Contribution</a></li>
+    <li><a href="#license">License</a></li>
+  </ul></li>
+</ul></div>
+  <script id="markdown" type="text/markdown"># Quick Markdown
+
+Quick Markdown is a lightweight, standalone markdown editor that works in browser.
+Original idea comes from [KanTanMarkdown ](https://tatesuke.github.io/KanTanMarkdown/).
+
+## How to use
+
+### Edit
+To begin editing, click the right-top "Edit" button (or Ctrl-E).
+
+Quick Markdown supports [GitHub Flavored Markdown](https://github.github.com/gfm/),
+and also code highlighting.
+Supported languages are listed in  [src/main/ts/lib/prismjs.ts](https://github.com/murank/quickmd/blob/master/src/main/ts/lib/prismjs.ts).
+
+In order to customize the page design, open "CSS" tab and put additional stylesheet.
+You can also preview the change in the preview area.
+
+
+### Preview
+You can preview whole document by clicking the right-top "Preview" button (or Ctrl-E) while editing.
+
+The preview mode shows actual (i.e. not in editing) html document.
+
+
+### Save
+To save the document in editing, click the right-top "Save" button (or Ctrl-S).
+
+
+### Update Quick Markdown
+Update `quickmd.js` in `scripts` directory, then re-save the document.
+
+
+## Limitations
+Quick Markdown uses [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) object so that you can't edit the document in the browsers which don't support Blob (e.g. <= IE9).
+
+If the edit buttons are not shown in IE>=10, the browser may be blocking javascript in local.
+Try re-open the document and allow to execute the local script.
+
+
+
+## Contribution
+Any issues or PR are welcome :)    
+[Github](https://github.com/murank/quickmd/)
+
+
+## License
+MIT
+</script>
+  <script src="scripts/quickmd.js" data-manual></script>
+</body>
+</html>

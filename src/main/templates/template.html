@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="${__("en")}">
+<!--
+  Quick Markdown ${VERSION}
+  Copyright (c) 2018 murank
+-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%= tmpl.title %></title>
+  <style><%=raw tmpl.defaultStyle %></style>
+  <style id="userStyle"><%= tmpl.style %></style>
+</head>
+<body>
+  <div id="contentPane"><%=raw tmpl.html %></div>
+  <div id="tocPane"><%=raw tmpl.toc %></div>
+  <script id="markdown" type="text/markdown"><%= tmpl.markdown %></script>
+  <script src="scripts/quickmd.js" data-manual></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="${__("en")}">
+<!--
+  Quick Markdown ${VERSION}
+  Copyright (c) 2018 murank
+-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>${__("Quick Markdown Template")}</title>
+  <style>${require('../scss/default.scss')}</style>
+  <style id="userStyle"></style>
+</head>
+<body>
+  <div id="contentPane">${require("html-loader!custom-loader?name=markdown!default.md")}</div>
+  <div id="tocPane">${require("html-loader!custom-loader?name=toc!custom-loader?name=markdown!default.md")}</div>
+  <script id="markdown" type="text/markdown">${require("custom-loader?name=raw!default.md")}</script>
+  <script src="scripts/quickmd.js" data-manual></script>
+</body>
+</html>
