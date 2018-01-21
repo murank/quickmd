@@ -1,2 +1,2 @@
-/dist/*         text eol=lf
+/dist/**/*         text eol=lf
 /package.json   text eol=lf
