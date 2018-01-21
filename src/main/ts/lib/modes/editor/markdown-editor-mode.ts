@@ -2,6 +2,7 @@
 
 import Context from '../../context';
 import { compileMarkdown, createToc, extractTitle } from '../../markdown';
+import { throttle } from '../../util';
 
 import AbstractEditorMode from './abstract-editor-mode';
 
@@ -12,6 +13,8 @@ export default class MarkdownEditMode extends AbstractEditorMode {
   markdown: string;
   html: string;
   toc: string;
+
+  valve = throttle(100);
 
   constructor(context: Context) {
     super(context);
@@ -24,10 +27,12 @@ export default class MarkdownEditMode extends AbstractEditorMode {
     this.markdown = value;
 
     this.html = compileMarkdown(value);
-    this.controls.contentPane.replaceInnerHTML(this.html);
-
     this.toc = createToc(this.html);
-    this.controls.tocPane.replaceInnerHTML(this.toc);
+
+    this.valve(() => {
+      this.controls.contentPane.replaceInnerHTML(this.html);
+      this.controls.tocPane.replaceInnerHTML(this.toc);
+    });
 
     this.emit('markdown.updated', extractTitle(this.html, MarkdownEditMode.DEFAULT_TITLE));
   }

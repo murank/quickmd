@@ -73,3 +73,20 @@ export function repeatString(text: string, num: number): string {
   }
   return result;
 }
+
+export function throttle(delay: number): (func: Function) => void {
+  let timerId: NodeJS.Timer | undefined;
+  let lastFunc: Function;
+
+  return (func: Function) => {
+    lastFunc = func;
+    if (timerId) {
+      return;
+    }
+
+    timerId = setTimeout(() => {
+      timerId = undefined;
+      lastFunc();
+    }, delay);
+  }
+}
